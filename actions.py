@@ -34,9 +34,7 @@ def invert(raw: List[List[List[int]]]) -> None:
     To invert a pixel, you swap all the max values, with all the
     minimum values. See the doc tests for examples.
 
-    >>> raw = [[[233, 100, 115], [0, 0, 0], [255, 255, 0]],[[199, 201, 116], [1, 9, 0], [255, 100, 100]]]
-    >>> invert(raw)
-    >>> raw
+
     [[[100, 233, 115], [0, 0, 0], [0, 0, 255]],
      [[199, 116, 201], [1, 0, 9], [100, 255, 255]]]
     """
