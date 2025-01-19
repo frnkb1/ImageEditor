@@ -1,15 +1,15 @@
 from PIL import Image
 from typing import List
 
-def mirror(raw: List[List[List[int]]])-> None:
+def mirror(raw: List[List[List[int]]])-> List[List[List[int]]]:
 
     #TODO
     for rows in raw:
         rows = rows.reverse()
-    return
+    return raw
 
 
-def grey(raw: List[List[List[int]]]) -> None:
+def grey(raw: List[List[List[int]]]) -> List[List[List[int]]]:
     """
     Assume raw is image data. Modifies raw "averaging out" each
     pixel of raw. Specifically, for each pixel it totals the RGB
@@ -25,10 +25,10 @@ def grey(raw: List[List[List[int]]]) -> None:
             avg = int(avg / 3)
             for rgb in range(len(raw[rownum][pixelnum])):
                 raw[rownum][pixelnum][rgb] = avg
-    return
+    return raw
 
 
-def invert(raw: List[List[List[int]]]) -> None:
+def invert(raw: List[List[List[int]]]) -> List[List[List[int]]]:
     """
     Assume raw is image data. Modifies raw inverting each pixel.
     To invert a pixel, you swap all the max values, with all the
@@ -50,4 +50,4 @@ def invert(raw: List[List[List[int]]]) -> None:
                     elif raw[rownum][pixelnum][rgb] == min_:
                         raw[rownum][pixelnum][rgb] = max_
 
-    return
+    return raw
