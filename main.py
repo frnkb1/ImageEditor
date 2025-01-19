@@ -33,6 +33,13 @@ def image_from_raw(raw: List[List[List[int]]], name: str) -> None:
 
 
 
+
+nested_rgb_image_list = get_raw_image("Untitled.png")
+mirror (nested_rgb_image_list)
+image_from_raw(nested_rgb_image_list, "new_edited_image.png")
+
+
+
 layout = [[gui.Text("")], [gui.Button("OK")]]
 
 # Create the window
@@ -41,6 +48,9 @@ gui.Window(title="Simple Image Editor", layout=[[]], margins=(400, 400)).read()
 
 while True:
     event, values = window.read()
+
+
+
     # End program if user closes window or
     # presses the OK button
     if event == "OK" or event == gui.WIN_CLOSED:

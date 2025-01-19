@@ -33,12 +33,7 @@ def invert(raw: List[List[List[int]]]) -> None:
     Assume raw is image data. Modifies raw inverting each pixel.
     To invert a pixel, you swap all the max values, with all the
     minimum values. See the doc tests for examples.
-
-
-    [[[100, 233, 115], [0, 0, 0], [0, 0, 255]],
-     [[199, 116, 201], [1, 0, 9], [100, 255, 255]]]
     """
-    #TODO
     for rownum in range(len(raw)):
         for pixelnum in range(len(raw[rownum])):
             if not (raw[rownum][pixelnum].count(raw[rownum][pixelnum][0]) == (len(raw[rownum][pixelnum]))):
